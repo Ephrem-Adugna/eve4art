@@ -1,0 +1,62 @@
+---
+import site from "../data/site.json";
+import { stripBase, withBase } from "../lib/paths";
+import "../styles.css";
+
+interface Props { title?: string; rawTitle?: string }
+const { title, rawTitle } = Astro.props;
+const pageTitle = rawTitle ?? (title ? `${title} | ${site.name}` : `${site.name} ${site.tagline}`);
+const path = stripBase(Astro.url.pathname);
+const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={site.description} />
+    <link rel="icon" href={withBase(site.logo)} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          {Array.from({ length: 12 }).map(() => <span>{site.ticker}</span>)}
+        </div>
+      </div>
+      <div class="bar">
+        <a class="brand" href={withBase("/")}><img src={withBase(site.logo)} alt={site.name} /></a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+        <nav id="nav">
+          <ul>
+            {site.nav.map((item) => (
+              <li><a href={withBase(item.href)} aria-current={isActive(item.href) ? "page" : undefined}>{item.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <ul class="social">
+        {site.social.map((s) => <li><a href={s.href} target="_blank" rel="noopener">{s.label}</a></li>)}
+      </ul>
+      <p>{site.copyright}</p>
+    </footer>
+
+    <script>
+      const btn = document.querySelector<HTMLButtonElement>(".menu-toggle")!;
+      const nav = document.getElementById("nav")!;
+      btn.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        btn.setAttribute("aria-expanded", String(open));
+      });
+    </script>
+  </body>
+</html>

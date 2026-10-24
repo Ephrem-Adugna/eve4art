@@ -1,0 +1,22 @@
+---
+import Base from "../layouts/Base.astro";
+import site from "../data/site.json";
+import { withBase } from "../lib/paths";
+---
+<Base>
+  <section class="hero">
+    <img src={withBase(site.home.hero)} alt="" />
+    <div class="hero-mark">
+      <img src={withBase(site.home.logo)} alt={site.name} />
+      <p>{site.tagline}</p>
+    </div>
+  </section>
+  <section class="features">
+    {site.home.features.map((f) => (
+      <a class="feature" href={withBase(f.href)}>
+        <img src={withBase(f.image)} alt="" loading="lazy" />
+        <span>{f.title}</span>
+      </a>
+    ))}
+  </section>
+</Base>

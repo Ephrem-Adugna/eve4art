@@ -1,0 +1,54 @@
+---
+import { withBase } from "../lib/paths";
+interface Item { image: string; caption?: string; detail?: string }
+interface Props { items: Item[] }
+const { items } = Astro.props;
+---
+<ul class="gallery">
+  {items.map((item, i) => (
+    <li>
+      <button class="gallery-item" data-index={i} aria-label={item.caption ? `${item.caption}, press to zoom` : "press to zoom"}>
+        <img src={withBase(item.image)} alt={item.caption || ""} loading="lazy" />
+      </button>
+      {(item.caption || item.detail) && (
+        <p class="caption">{item.caption}{item.detail && <span>{item.detail}</span>}</p>
+      )}
+    </li>
+  ))}
+</ul>
+
+<dialog class="lightbox">
+  <button class="lb-close" aria-label="Close">×</button>
+  <button class="lb-prev" aria-label="Previous">‹</button>
+  <figure>
+    <img alt="" />
+    <figcaption></figcaption>
+  </figure>
+  <button class="lb-next" aria-label="Next">›</button>
+</dialog>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>(".lightbox")!;
+  const img = dialog.querySelector("img")!;
+  const cap = dialog.querySelector("figcaption")!;
+  const tiles = [...document.querySelectorAll<HTMLButtonElement>(".gallery-item")];
+  let current = 0;
+
+  function show(i: number) {
+    current = (i + tiles.length) % tiles.length;
+    const src = tiles[current].querySelector("img")!;
+    img.src = src.src;
+    img.alt = src.alt;
+    cap.textContent = src.alt;
+  }
+
+  tiles.forEach((t, i) => t.addEventListener("click", () => { show(i); dialog.showModal(); }));
+  dialog.querySelector(".lb-close")!.addEventListener("click", () => dialog.close());
+  dialog.querySelector(".lb-prev")!.addEventListener("click", () => show(current - 1));
+  dialog.querySelector(".lb-next")!.addEventListener("click", () => show(current + 1));
+  dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+  dialog.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") show(current - 1);
+    if (e.key === "ArrowRight") show(current + 1);
+  });
+</script>

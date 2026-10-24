@@ -1,0 +1,210 @@
+{
+  "name": "eve4art",
+  "tagline": "Handmade Art and Fashion",
+  "description": "Creative Home, Art and Fashion Designs by eve4art",
+  "logo": "/images/0f0c73_d1c583dee543736eb805cec211dcd58c.png",
+  "ticker": "INTERIORS",
+  "copyright": "Copyright 2022, No animals were harmed in the making",
+  "nav": [
+    {
+      "label": "HOME",
+      "href": "/"
+    },
+    {
+      "label": "GALLERY",
+      "href": "/gallery"
+    },
+    {
+      "label": "ART",
+      "href": "/art"
+    },
+    {
+      "label": "FASHION",
+      "href": "/fashion"
+    },
+    {
+      "label": "DECOR",
+      "href": "/decor"
+    },
+    {
+      "label": "STORY",
+      "href": "/story"
+    },
+    {
+      "label": "BLOG",
+      "href": "/blog"
+    },
+    {
+      "label": "CONTACT",
+      "href": "/contact"
+    }
+  ],
+  "social": [
+    {
+      "label": "Pinterest",
+      "href": "http://pinterest.com/eve4art2/"
+    },
+    {
+      "label": "Etsy",
+      "href": "http://www.etsy.com/shop/eve4art"
+    },
+    {
+      "label": "Blog",
+      "href": "http://eve4art.blogspot.com/"
+    },
+    {
+      "label": "Facebook",
+      "href": "http://www.Facebook.com/eve4art"
+    },
+    {
+      "label": "Polyvore",
+      "href": "http://eveart.polyvore.com/"
+    }
+  ],
+  "home": {
+    "hero": "/images/0f0c73_f871d88336fd02add46f28e1343edae7.jpg",
+    "logo": "/images/0f0c73_d1c583dee543736eb805cec211dcd58c.png",
+    "features": [
+      {
+        "title": "ART",
+        "image": "/images/0f0c73_263a53279ae2fdec91de35dcce4e9eaf.jpg",
+        "href": "/art"
+      },
+      {
+        "title": "FASHION",
+        "image": "/images/0f0c73_f2c37b15472c9dda95e009aab27cd253.jpg",
+        "href": "/fashion"
+      },
+      {
+        "title": "DECOR",
+        "image": "/images/0f0c73_682353ed7e24182d6469b0d5c4266d19.jpg",
+        "href": "/decor"
+      }
+    ]
+  },
+  "galleries": {
+    "art": {
+      "title": "ART",
+      "items": [
+        {
+          "image": "/images/0f0c73_263a53279ae2fdec91de35dcce4e9eaf.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_3ac1cf3da24e61f809ebd5b58cca9c1c.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_be2c96382e9130780cabdcfad4812f97.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_a95de6f28e1b88d16a666da3fe16de31.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_3c334909a0df38b151069207961efcb8.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_a51b7aebabeb856a955a28085b9737b6.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_a06f63e073636d31828e8ec5ed84bc82.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_cf1d40749c580c5106e36cf7c16775d2.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_bdcbb60e9684163b4ccafed4f79e6976.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    "fashion": {
+      "title": "FASHION",
+      "items": [
+        {
+          "image": "/images/0f0c73_f2c37b15472c9dda95e009aab27cd253.jpg",
+          "caption": "Hand made Assorted Scarf's"
+        },
+        {
+          "image": "/images/0f0c73_d92b4712fa96ef7a6609afea9bc7da80.jpg",
+          "caption": "Hand bejeweled heels"
+        },
+        {
+          "image": "/images/0f0c73_f9a7127313ff0a3c2010159453422085.jpg",
+          "caption": "Hand bejeweled heels"
+        },
+        {
+          "image": "/images/0f0c73_6a5925892dca9ab3d56df59f8e42c975.jpg",
+          "caption": "Hand bejeweled heels"
+        },
+        {
+          "image": "/images/0f0c73_aaaee1f381b57a04ee61299b40e99118.jpg",
+          "caption": "Hand made clutches"
+        }
+      ]
+    },
+    "decor": {
+      "title": "DECOR",
+      "items": [
+        {
+          "image": "/images/0f0c73_682353ed7e24182d6469b0d5c4266d19.jpg",
+          "caption": "Handmade Quilt",
+          "detail": "72\" X 45\""
+        },
+        {
+          "image": "/images/0f0c73_a68a01bd87c16b7a0a20b1936a4c15fb.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_fbdd4c0963634aec41eb90f045a2ad51.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_9a8ab7ef806b8d18670a952716f42455.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_6537cf42e39ff183bbdcc28988e00374.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_2a1231f12fe4c73619f1cb985a363e1d.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/images/0f0c73_3abb41eac4aa3703982aabe7e28c1bac.jpg",
+          "caption": ""
+        }
+      ]
+    }
+  },
+  "story": {
+    "pageTitle": "Bio",
+    "title": "THE STORY",
+    "portrait": "/images/0f0c73_682353ed7e24182d6469b0d5c4266d19.jpg",
+    "paragraphs": [
+      "Hi. Thank you for stopping by! My name is eve and for, as long as I can remember, I have loved fashion design and making things with my hands. I studied fashion design, and costuming for motion picture, television and stage. My designs have been worn on stage by Stevie Wonder, Anita Baker, Denise Williams and others. My quilts and mix-media art are sold and exhibited in galleries. I love to sing, entertain, travel, parties, dancing, gallery openings, fashion shows, concerts, live theater, thrift stores, helping others, the beach, teaching free sewing & art workshops for inner-city youth and children, the beach and Family gatherings! This creative space allows me to share with you my passion for fashion, decorating, interior design, textiles and making art. I hope this creative space is an inspiration to you!"
+    ],
+    "etsyButton": {
+      "image": "/images/0f0c73_d7dd61117626e88a4ba23825f8e15700.png",
+      "href": "http://www.etsy.com/shop/eve4art"
+    }
+  },
+  "contact": {
+    "heading": "Let's Talk.",
+    "addressLines": [
+      "P.O. Box 451935",
+      "Los Angeles, Ca 90045."
+    ],
+    "logo": "/images/0f0c73_ccf1b2fd3b0bddf2f4ec70c99b989b56.png",
+    "button": "Send",
+    "success": "Success! Message received.",
+    "formAction": ""
+  }
+}

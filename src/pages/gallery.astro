@@ -1,0 +1,17 @@
+---
+import Base from "../layouts/Base.astro";
+import site from "../data/site.json";
+import { withBase } from "../lib/paths";
+const categories = Object.entries(site.galleries);
+---
+<Base title="GALLERY">
+  <h1 class="page-title">GALLERY</h1>
+  <section class="features">
+    {categories.map(([slug, g]) => (
+      <a class="feature" href={withBase(`/${slug}`)}>
+        <img src={withBase(g.items[0]?.image)} alt="" loading="lazy" />
+        <span>{g.title}</span>
+      </a>
+    ))}
+  </section>
+</Base>

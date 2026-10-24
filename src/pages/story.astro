@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+import site from "../data/site.json";
+import { withBase } from "../lib/paths";
+const { story } = site;
+---
+<Base rawTitle={story.pageTitle}>
+  <article class="story">
+    <img src={withBase(story.portrait)} alt="Handmade Quilt" />
+    <div>
+      <h1>{story.title}</h1>
+      {story.paragraphs.map((p) => <p>{p}</p>)}
+      <a class="etsy" href={story.etsyButton.href} target="_blank" rel="noopener">
+        <img src={withBase(story.etsyButton.image)} alt="Etsy" />
+      </a>
+    </div>
+  </article>
+</Base>

@@ -1,0 +1,24 @@
+---
+import Base from "../../layouts/Base.astro";
+import { withBase } from "../../lib/paths";
+
+// Every .md file in src/content/blog becomes a post.
+const posts = Object.values(import.meta.glob<any>("../../content/blog/*.md", { eager: true }))
+  .map((p) => ({ ...p.frontmatter, slug: p.file.split("/").pop().replace(/\.md$/, "") }))
+  .sort((a, b) => +new Date(b.date) - +new Date(a.date));
+---
+<Base title="BLOG">
+  <h1 class="page-title">BLOG</h1>
+  <ul class="posts">
+    {posts.map((p) => (
+      <li>
+        <a href={withBase(`/blog/${p.slug}`)}>
+          {p.cover && <img src={withBase(p.cover)} alt="" loading="lazy" />}
+          <time datetime={p.date}>{new Date(p.date).toLocaleDateString("en-US", { dateStyle: "long" })}</time>
+          <h2>{p.title}</h2>
+          {p.excerpt && <p>{p.excerpt}</p>}
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>

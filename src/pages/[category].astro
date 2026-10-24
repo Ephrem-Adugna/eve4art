@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+import Gallery from "../components/Gallery.astro";
+import site from "../data/site.json";
+
+// One page per key in site.json "galleries" (art, fashion, decor, ...).
+export function getStaticPaths() {
+  return Object.entries(site.galleries).map(([category, gallery]) => ({
+    params: { category },
+    props: { gallery },
+  }));
+}
+const { gallery } = Astro.props;
+---
+<Base title={gallery.title}>
+  <h1 class="page-title">{gallery.title}</h1>
+  <Gallery items={gallery.items} />
+</Base>
